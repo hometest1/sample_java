@@ -12,7 +12,7 @@ build:
     image_tag: prod
     pull: true
   ci:
-    - echo "here_11"
+    - echo "sleep 5m"
 #    - echo "versionName=$BRANCH.$BUILD_NUMBER" >> $JOB_STATE/nginx-image.env
 #    - here_askask_3
 #    - sleep 40
