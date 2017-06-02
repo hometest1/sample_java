@@ -12,9 +12,9 @@ build:
     image_tag: latest
     pull: true
   ci:
-    - echo "sleep 5m"
-#    - echo "versionName=$BRANCH.$BUILD_NUMBER" >> $JOB_STATE/nginx-image.env
-#    - here_askask_3
-#    - sleep 40
+    - echo "running xvfb"
+    - "export DISPLAY=:99.0"
+    - xvfb-run --server-args="-ac" mvn verify -Pfirefox -Pjunit4testset -e
+
       
 
