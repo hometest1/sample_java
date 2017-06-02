@@ -8,8 +8,8 @@ language: java
 
 build:
   pre_ci_boot:
-    image_name: drydock/u14jav
-    image_tag: prod
+    image_name: niranjanhub/u14javall
+    image_tag: latest
     pull: true
   ci:
     - echo "sleep 5m"
@@ -17,32 +17,4 @@ build:
 #    - here_askask_3
 #    - sleep 40
       
-#integrations:
-#  notifications:
-#    - integrationName: slack-subint
-#      type: slack
-#      recipients:
-#        - "#test-5148"
-#      on_start: always
-#      on_success: always
-#      on_failure: always
 
-
-
-#      - integrationName: email
-#        type: email
-#        recipients:
-#          - ankulkumar001@gmail.com
-#        on_start: always
-
-#integrations:
-#  notifications:
-#    - integrationName: webhook-subint
-#      type: webhook
-#      payload:
-#        - isPRBuild=$IS_PULL_REQUEST
-#        - branchName=$BRANCH
-#        - message=Shippable Run $BUILD_NUMBER ($BUILD_URL) succeeded for $COMPARE_URL
-#        - FOO=BAR
-#        - FIZZ=BUZZ
-#        - versionName=$BRANCH:$BUILD_NUMBER
