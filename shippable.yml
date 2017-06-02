@@ -5,6 +5,8 @@ language: java
 #  - openjdk7
 #  - oraclejdk7
 #  - oraclejdk8
+addons:
+  firefox: "47.0"
 
 build:
   pre_ci_boot:
