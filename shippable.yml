@@ -16,7 +16,7 @@ build:
   ci:
     - echo "running xvfb"
     - "export DISPLAY=:99.0"
-    - xvfb-run --server-args="-ac" mvn verify -Pfirefox -Pjunit4testset -e
+    - xvfb-run --server-args="-ac" mvn verify -Pfirefox -e
 
       
 
