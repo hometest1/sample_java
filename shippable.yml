@@ -7,7 +7,9 @@ language: java
 #  - oraclejdk8
 addons:
   firefox: "47.0"
-
+env:
+  global:
+    - secure: oaYhS9W65uKLmultFIwLRQMbXTHLGLklgXsTqPoAO2/0uvxMosnhOvdWSdWhWMkK8L2Gnd5U9I7l1ITY4+IxDgdfEMzZ/KwFzVFoR3/Y1yaL2ICeT2PY2PATTHbCob0XX5H3IKmNYPcidqENew+PogEcuqASp+A9QPkUu2+L2f5j3o6g0V6W2LWCO9l8NeHLqIE+Y1rRzlCAwvwldHynCj+OUG4hjqz6aSLXu3ZMwI3e1o/3D4I56oXufreHhTLQZ03ClXmYKRzuR2n1a8jURHR9LIyRLRTBi5rCxBsrl4D9vlpmRT15Z25F37Q42oiCrPkjBy3+JtEaOxJAUgu/qA==
 build:
   pre_ci_boot:
     image_name: niranjanhub/u14javall
@@ -17,6 +19,7 @@ build:
     - echo "running xvfb"
     - "export DISPLAY=:99.0"
     - xvfb-run --server-args="-ac" mvn verify -Pfirefox -e
+    - echo $foo
 
       
 
